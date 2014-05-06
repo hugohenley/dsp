@@ -1,0 +1,1 @@
+h = helpdlg('This is a help string','My Help Dialog');
