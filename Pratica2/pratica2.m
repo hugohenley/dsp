@@ -1,7 +1,7 @@
 clear all
 close all
 
-figure(13)
+figure(1)
 subplot(4,3,1),subimage(um,summer)
 axis off
 subplot(4,3,2),subimage(dois,jet)
@@ -27,6 +27,8 @@ axis off
 subplot(4,3,12),subimage(tralha,flipud(summer))
 axis off
 
-
-
+figure(2)
+teclado = [um dois tres;quatro cinco seis;sete oito nove; aster zero tralha]
+image(teclado)
+axis image
 
