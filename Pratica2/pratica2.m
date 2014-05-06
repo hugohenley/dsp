@@ -28,7 +28,20 @@ subplot(4,3,12),subimage(tralha,flipud(summer))
 axis off
 
 figure(2)
-teclado = [um dois tres;quatro cinco seis;sete oito nove; aster zero tralha]
+m1 = ones(32, 32);
+m2 = zeros(32,32);
+%m1= ones(32,32)*32
+%m2 = [m1 m1 m1 m1,244)*64
+teclado = [m1 m1 m1 m1 m1 m1 m1;m1 um m1 dois m1 tres m1;m1 m1 m1 m1 m1 m1 m1;m1 quatro m1 cinco m1 seis m1;m1 m1 m1 m1 m1 m1 m1;m1 sete m1 oito m1 nove m1;m1 m1 m1 m1 m1 m1 m1;m1 aster m1 zero m1 tralha m1;m1 m1 m1 m1 m1 m1 m1;]
 image(teclado)
-axis image
+grid off
+%colordef white
+%teclado = [um dois tres;quatro cinco seis;sete oito nove; aster zero tralha]
+whitebg(figure(2))
+%image(m1)
+%figure(3)
+%image(m2)
+%axis image
+
+
 
