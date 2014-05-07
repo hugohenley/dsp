@@ -36,7 +36,7 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 %    falha=errordlg('É necessário escolher uma imagem antes.', 'ERRO');
 %    pause
 %end
-
+try
 filename=handles.filename
 figure(2)
 subplot(1,2,1), imshow(filename);
@@ -44,10 +44,15 @@ title('Imagem Original');
 subplot(1,2,2),flipVertical(filename);
 title('Espelhamento Vertical');
 tarefa_sucesso
+catch
+    f = errordlg('Primeiro escolha uma imagem', 'Erro');
+end
+
 
 
 % --- Execução do botão "Espelhamento Horizontal".
 function pushbutton2_Callback(hObject, eventdata, handles)
+try
 filename=handles.filename
 figure(2)
 subplot(1,2,1), imshow(filename);
@@ -55,10 +60,14 @@ title('Imagem Original');
 subplot(1,2,2),flipHorizontal(filename);
 title('Espelhamento Horizontal');
 tarefa_sucesso
+catch
+    f = errordlg('Primeiro escolha uma imagem', 'Erro');
+end
 
 
 % --- Execução do botão "Espehamento Origem"
 function pushbutton3_Callback(hObject, eventdata, handles)
+try
 filename=handles.filename
 figure(2)
 subplot(1,2,1), imshow(filename);
@@ -66,10 +75,14 @@ title('Imagem Original');
 subplot(1,2,2),flipHorizontalVertical(filename);
 title('Espelhamento na origem');
 tarefa_sucesso
+catch
+    f = errordlg('Primeiro escolha uma imagem', 'Erro');
+end
 
 
 % --- Execução do botão "Rotacionar".
 function pushbutton5_Callback(hObject, eventdata, handles)
+try
 filename=handles.filename
 x = inputdlg('Digite o angulo de rotacao desejado:',...
               '', [1]);
@@ -80,6 +93,9 @@ title('Imagem Original');
 subplot(1,2,2),rotaciona(filename,angulo);
 title('Imagem Rotacionada');
 tarefa_sucesso
+catch
+    f = errordlg('Primeiro escolha uma imagem', 'Erro');
+end
 
 % --- Execução do botão "Escolha a imagem".
 function pushbutton7_Callback(hObject, eventdata, handles)
@@ -100,6 +116,7 @@ function popupmenu2_Callback(hObject, eventdata, handles)
 val = get(hObject,'Value');
 switch val
     case 2
+        try
         filename=handles.filename
         figure(2)
         subplot(1,2,1), imshow(filename);
@@ -107,9 +124,13 @@ switch val
         subplot(1,2,2),combina_flipHo_flipVe(filename);
         title('Espelhamento horizontal+vertical');
         tarefa_sucesso
+        catch
+            f = errordlg('Primeiro carregue uma imagem', 'Erro');
+        end
 
         
     case 3
+        try
         filename=handles.filename
         figure(2)
         subplot(1,2,1), imshow(filename);
@@ -117,8 +138,12 @@ switch val
         subplot(1,2,2),combina_flipHo_flipHoVe(filename);
         title('Espelhamento horizontal+origem');
         tarefa_sucesso
+        catch
+            f = errordlg('Primeiro carregue uma imagem', 'Erro');
+        end
  
     case 4
+        try
         filename=handles.filename
         figure(2)
         subplot(1,2,1), imshow(filename);
@@ -126,8 +151,13 @@ switch val
         subplot(1,2,2),combina_flipVe_flipHoVe(filename);
         title('Espelhamento vertical+origem');
         tarefa_sucesso
+        catch
+            f = errordlg('Primeiro carregue uma imagem', 'Erro');
+        end
+       
         
     case 5
+        try
         filename=handles.filename
         x = inputdlg('Digite o angulo de rotacao desejado:',...
               '', [1]);
@@ -138,8 +168,12 @@ switch val
         subplot(1,2,2),combina_flipHo_rot(filename,angulo);
         title('Espelhamento horizontal+rotacionamento');
         tarefa_sucesso
+        catch
+            f = errordlg('Primeiro carregue uma imagem', 'Erro');
+        end
         
     case 6
+        try
         filename=handles.filename
         x = inputdlg('Digite o angulo de rotacao desejado:',...
               '', [1]);
@@ -150,8 +184,11 @@ switch val
         subplot(1,2,2),combina_flipVe_rot(filename,angulo);
         title('Espelhamento vertical+rotacionamento');
         tarefa_sucesso
+        catch
+            f = errordlg('Primeiro carregue uma imagem', 'Erro');
+        end
 end
-val
+%val
 
 
 % --- Função do menu popup.
