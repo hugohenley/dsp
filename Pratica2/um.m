@@ -16,5 +16,5 @@ b = makeUm
 %cmap = colormap
 %cmap = flipud(cmap)
 %colormap(cmap)
-%%image(makeUm)
+%image(makeUm)
 %axis image
