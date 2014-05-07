@@ -6,7 +6,10 @@ function B = rotaciona(arg1,arg2)
 %arg2 = múltiplo inteiro de 45 graus.
 %Exemplo: rotaciona('vegas.jpg',-90);
 
-
+try
 A = imread(arg1);
 B = imrotate(A,arg2,'nearest');
 imshow(B);
+catch
+    f = warndlg('Somente números reais inteiros são permitidos.', 'Atenção');
+end
