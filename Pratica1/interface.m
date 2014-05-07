@@ -84,7 +84,7 @@ end
 function pushbutton5_Callback(hObject, eventdata, handles)
 try
 filename=handles.filename
-x = inputdlg('Digite o angulo de rotacao desejado:',...
+x = inputdlg('Digite um múltiplo inteiro de pi/2 para rotacionar a imagem:',...
               '', [1]);
 angulo = str2num(x{:}); %angulo = input('Digite o angulo desejado: ');
 figure(2)
