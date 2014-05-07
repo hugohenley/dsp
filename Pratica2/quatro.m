@@ -9,7 +9,7 @@ makeQuatro(2:32, 23) = 1;
 makeQuatro(18, 10:22) = 1;
 makeQuatro(19, 10:22) = 1;
 
-b = makeQuatro
+b = makeQuatro;
 
 %figure
 %colormap(winter(128))

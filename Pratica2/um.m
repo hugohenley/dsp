@@ -9,12 +9,9 @@ makeUm(31, 6:26) = 1;
 makeUm(4:30, 16) = 1;
 makeUm(4:30, 17) = 1;
 
-b = makeUm
-    
+b = makeUm;
+   
 %figure
-%colormap(jet(128))
-%cmap = colormap
-%cmap = flipud(cmap)
-%colormap(cmap)
-%image(makeUm)
+%colormap(summer)
+%image(makeDois)
 %axis image

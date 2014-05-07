@@ -19,7 +19,7 @@ cinco(32, 10:24) = 1;
 cinco(16:32, 25) = 1;
 cinco(16:32, 24) = 1;
 
-b = cinco
+b = cinco;
 %figure
 %colormap(spring(128))
 %cmap = colormap

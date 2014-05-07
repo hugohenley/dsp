@@ -15,7 +15,7 @@ tralha(5:30, 12) = 1;
 tralha(5:30, 24) = 1;
 tralha(5:30, 26) = 1;
 
-b = tralha
+b = tralha;
 
 %figure
 %colormap(summer)

@@ -16,7 +16,7 @@ seis(2:32, 7) = 1;
 seis(16:32, 26) = 1;
 seis(16:32, 25) = 1;
 
-b = seis
+b = seis;
 
 %figure
 %colormap(spring)

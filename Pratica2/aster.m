@@ -17,7 +17,7 @@ aster(14,20)=1;
 aster(12,22)=1;
 aster(10,24)=1;
 
-b = aster
+b = aster;
 %figure;
 %colormap(spring);
 %cmap = colormap

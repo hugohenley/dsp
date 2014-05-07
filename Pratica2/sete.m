@@ -10,7 +10,7 @@ sete(16, 8:23) = 1;
 
 sete(4:32, 16) = 1;
 sete(4:32, 17) = 1;
-b = sete
+b = sete;
 
 %figure
 %colormap(cool(128))

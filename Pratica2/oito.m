@@ -16,7 +16,7 @@ oito(4:32, 21) = 1;
 oito(4:32, 8) = 1;
 oito(4:32, 9) = 1;
 
-b = oito
+b = oito;
 
 %figure
 %colormap(redbluecmap)

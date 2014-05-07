@@ -1,23 +1,45 @@
 clear all
 close all
 
-cmap0 = flipud(jet)
-cmap1 = summer
-cmap2 = jet
-cmap3 = winter
-cmap4 = copper
-cmap5 = autumn
-cmap6 = flipud(winter)
-cmap7 = flipud(cool(128))
-cmap8 = redbluecmap
-cmap9 = redgreencmap
-cmap10 = flipud(spring)
-cmap11 = flipud(hot(128))
-cmap12 = flipud(summer)
-
 figure(1)
+image(um);colormap(summer(32));
 
-subplot(4,3,1),subimage(um,summer)
+figure(2)
+image(dois);colormap(jet(32));
+
+figure(3)
+image(tres);colormap(winter);
+
+figure(4)
+image(quatro);colormap(copper);
+
+figure(5)
+image(cinco);colormap(autumn);
+
+figure(6)
+image(seis);colormap(flipud(winter));
+
+figure(7)
+image(sete);colormap(flipud(cool(128)));
+
+figure(8)
+image(oito);colormap(redbluecmap);
+
+figure(9)
+image(nove);colormap(redgreencmap);
+
+figure(10)
+image(aster);colormap(flipud(spring));
+
+figure(11)
+image(zero);colormap(flipud(hot(128)));
+
+figure(11)
+image(zero);colormap(flipud(summer));
+
+figure(12)
+
+subplot(4,3,1),subimage(um,summer(32))
 axis off
 subplot(4,3,2),subimage(dois,jet)
 axis off
@@ -43,67 +65,43 @@ subplot(4,3,12),subimage(tralha,flipud(summer))
 axis off
 
 
-figure(2)
-%%image
-%%hold on
-%%subimage
-%colormap white
-m1 = zeros(32, 32);
-
-A = ones(288,224)
-colormap white
-image(A)
-hold on
-subimage(32 , 32 ,um,summer)
-%m2 = zeros(32,32);
-%m1= ones(32,32)*32
-%m2 = [m1 m1 m1 m1,244)*64
-
-%cmap = [cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 ...
-%    ;cmap1 cmap1 cmap1 cmap2 cmap1 tres cmap1 ...
-%    ;cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 ...
-%    ;cmap1 quatro cmap1 cinco cmap1 seis cmap1 ...
-%    ;cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 ...
-%    ;cmap1 sete cmap1 oito cmap1 nove cmap1 ...
-%    ;cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 ...
-%    ;cmap1 aster cmap1 zero cmap1 tralha cmap1 ...
-%    ;cmap1 cmap1 cmap1 cmap1 cmap1 cmap1 cmap1;]
-
-%colormap(cmap)
-
-%teclado = [m1 m1 m1 m1 m1 m1 m1 ...
-%    ;m1 um m1 dois m1 tres m1 ...
-%    ;m1 m1 m1 m1 m1 m1 m1 ...
-%    ;m1 quatro m1 cinco m1 seis m1 ...
-%    ;m1 m1 m1 m1 m1 m1 m1 ...
-%    ;m1 sete m1 oito m1 nove m1 ...
-%    ;m1 m1 m1 m1 m1 m1 m1 ...
-%    ;m1 aster m1 zero m1 tralha m1 ...
-%    ;m1 m1 m1 m1 m1 m1 m1;]
-
-
-%teclado
-%a = teclado(2,2)
+figure(13)
+teclado = zeros(288,224);
+cmap0 = [1 1 1];
+colormap(cmap0);
 image(teclado)
-%A = pcolor(97:128 161:192,summer)
-%imagesc(97:128 , 161:192,summer)
-%colormap(summer)
-%grid off
-%colordef white
-%teclado = [um dois tres;quatro cinco seis;sete oito nove; aster zero tralha]
-%whitebg(figure(2))
-%image(m1)
-%figure(3)
-%image(m2)
-%axis image
-%axis square
+hold on
+subimage(32,32,um,summer(32))
+subimage(96,32,dois,jet(32))
+subimage(160,32,tres,winter(32))
+subimage(32,96,quatro,copper(32))
+subimage(96,96,cinco,autumn(32))
+subimage(160,96,seis,flipud(winter(32)))
+subimage(32,160,sete,flipud(cool(128)))
+subimage(96,160,oito,redbluecmap(32))
+subimage(160,160,nove,redgreencmap(32))
+subimage(32,224,aster,flipud(spring(32)))
+subimage(96,224,zero,flipud(hot(128)))
+subimage(160,224,tralha,flipud(summer(128)))
+hold off
 
-
-%A = subplot(4,3,1),subimage(um,summer)
-%B = subplot(4,3,2),subimage(dois,jet)
-
-%C = A + B
-%image(C)
-
-
+figure(14)
+teclado2 = zeros(288,224);
+cmap0 = [0 0 0];
+colormap(cmap0);
+image(teclado2)
+hold on
+subimage(32,32,um,summer(32))
+subimage(96,32,dois,jet(32))
+subimage(160,32,tres,winter(32))
+subimage(32,96,quatro,copper(32))
+subimage(96,96,cinco,autumn(32))
+subimage(160,96,seis,flipud(winter(32)))
+subimage(32,160,sete,flipud(cool(128)))
+subimage(96,160,oito,redbluecmap(32))
+subimage(160,160,nove,redgreencmap(32))
+subimage(32,224,aster,flipud(spring(32)))
+subimage(96,224,zero,flipud(hot(128)))
+subimage(160,224,tralha,flipud(summer(128)))
+hold off
 

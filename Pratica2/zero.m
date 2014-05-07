@@ -65,7 +65,7 @@ zero(6, 21) = 1;
 zero(5, 21) = 1;
 
 %digonal2 - fim
-b = zero
+b = zero;
 
 %figure
 %colormap(hot(128))

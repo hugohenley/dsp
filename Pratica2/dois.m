@@ -17,7 +17,7 @@ makeDois(2:16, 25) = 1;
 makeDois(16:32, 8) = 1;
 makeDois(16:32, 9) = 1;
 
-b = makeDois
+b = makeDois;
 
 %figure
 %colormap(summer)

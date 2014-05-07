@@ -13,7 +13,7 @@ nove(4:32, 21) = 1;
 nove(4:16, 8) = 1;
 nove(4:16, 9) = 1;
 
-b = nove
+b = nove;
 
 %figure
 %colormap(redgreencmap)

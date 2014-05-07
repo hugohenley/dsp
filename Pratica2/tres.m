@@ -13,7 +13,7 @@ makeTres(31, 6:26) = 1;
 makeTres(4:30, 26) = 1;
 makeTres(4:30, 25) = 1;
 
-b = makeTres
+b = makeTres;
 
 %figure
 %colormap(winter)
