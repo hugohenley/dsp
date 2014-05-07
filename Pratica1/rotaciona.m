@@ -1,14 +1,16 @@
-function B = rotaciona(arg1,arg2)
+function B = rotaciona(imagem,multiplo)
 
 %rotaciona
 %B = rotaciona(arg1,arg2)
-%arg1 = imagem a ser rotacionada
-%arg2 = múltiplo inteiro de 45 graus.
+%imagem = imagem a ser rotacionada
+%multiplo = múltiplo inteiro de pi/2.
 %Exemplo: rotaciona('vegas.jpg',-90);
 
 try
-A = imread(arg1);
-B = imrotate(A,arg2,'nearest');
+A = imread(imagem);
+
+phi = multiplo*90;
+B = imrotate(A,phi,'nearest');
 imshow(B);
 catch
     f = warndlg('Somente números reais inteiros são permitidos.', 'Atenção');
